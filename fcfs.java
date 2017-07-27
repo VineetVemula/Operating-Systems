@@ -53,7 +53,9 @@ class fcfs
 
  for(i=0;i<n;i++)
  {
-   ct=ct+p[i].bt;
+  if(ct<p[i].at)
+     ct=p[i].at; 
+  ct=ct+p[i].bt;
    p[i].ct=ct;
    p[i].tat=p[i].ct-p[i].at;
    p[i].wt=p[i].tat-p[i].bt;
