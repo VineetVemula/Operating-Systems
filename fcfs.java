@@ -14,7 +14,8 @@ class fcfs
 {
  public static void main(String args[])
  {
-  int i,j,ct=0,wt;
+  int i,j,ct=0,wt,avgwt=0,avgtat=0;
+  float awt=0,atat=0;
   Scanner sc = new Scanner(System.in);
   System.out.println("Enter number of processes");
   int n = sc.nextInt();
@@ -53,18 +54,23 @@ class fcfs
 
  for(i=0;i<n;i++)
  {
-  if(ct<p[i].at)
-     ct=p[i].at; 
-  ct=ct+p[i].bt;
+   if(ct<p[i].at)
+     ct=p[i].at;
+   ct=ct+p[i].bt;
    p[i].ct=ct;
    p[i].tat=p[i].ct-p[i].at;
    p[i].wt=p[i].tat-p[i].bt;
+   avgwt= avgwt+p[i].wt;
+   avgtat = avgtat+p[i].tat;
  }
  System.out.println("PID\tAT\tBT\tCT\tTAT\tWT");
  for(i=0;i<n;i++)
  {
    System.out.println(p[i].pid+"\t"+ p[i].at+"\t"+ p[i].bt+"\t"+p[i].ct+"\t"+ p[i].tat+"\t"+ p[i].wt);
  }
+ awt = (float)avgwt/n;
+ atat =(float)avgtat/n;
+ System.out.println("avg TAT = "+atat+" avg WT= "+awt);
  }
 }
 
@@ -98,3 +104,4 @@ PID	AT	BT	CT	TAT	WT
 3	2	1	8	6	5
 4	3	2	10	7	5
 5	4	5	15	11	6
+avg TAT = 6.8 avg WT= 3.8
