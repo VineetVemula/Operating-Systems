@@ -70,6 +70,30 @@ class srtn
  }
  while(c<n)
  {
+   for(i=0;i<n-1;i++)
+   {
+    for(j=0;j<n-1;j++)
+    {
+     if((p[j].at)>(p[j+1].at))
+     {
+      t=p[j];
+      p[j]=p[j+1];
+      p[j+1]=t;
+     }
+    }
+   }
+   for(i=0;i<n-1;i++)
+   {
+    for(j=0;j<n-1;j++)
+    {
+     if((p[j].rt)>(p[j+1].rt))
+     {
+      t=p[j];
+      p[j]=p[j+1];
+      p[j+1]=t;
+     }
+    }
+   }
     for(i=0;i<n;i++)
     {
       if(p[i].at<=tym &&(p[i].son)==0)
@@ -93,7 +117,7 @@ class srtn
     	p[index].ct=tym+1;
     	c++;
     }
-    
+
    }
    tym++;
  }
@@ -130,4 +154,66 @@ class srtn
  System.out.println("avg TAT = "+atat+" avg WT= "+awt);
  }
 }
+
+OUTPUT------------------
+
+Enter number of processes
+6
+Enter process id, arrival time, burst time
+1	0	7
+2	1	5
+3	2	3
+4	3	1
+5	4	2
+6	5	1
+PID	AT	BT
+1	0	7
+2	1	5
+3	2	3
+4	3	1
+5	4	2
+6	5	1
+PID	AT	BT
+4	3	1
+6	5	1
+5	4	2
+3	2	3
+2	1	5
+1	0	7
+PID	AT	BT	CT	TAT	WT	SON
+1	0	7	19	19	12	1
+2	1	5	13	12	7	1
+3	2	3	6	4	1	1
+4	3	1	4	1	0	1
+5	4	2	9	5	3	1
+6	5	1	7	2	1	1
+avg TAT = 7.1666665 avg WT= 4.0
+
+Enter number of processes
+5
+Enter process id, arrival time, burst time
+1	2	8
+2	7	1
+3	6	2
+4	3	6
+5	5	4
+PID	AT	BT
+1	2	8
+2	7	1
+3	6	2
+4	3	6
+5	5	4
+PID	AT	BT
+2	7	1
+3	6	2
+5	5	4
+4	3	6
+1	2	8
+PID	AT	BT	CT	TAT	WT	SON
+1	2	8	23	21	13	1
+2	7	1	9	2	1	1
+3	6	2	8	2	0	1
+4	3	6	12	9	3	1
+5	5	4	16	11	7	1
+avg TAT = 9.0 avg WT= 4.8
 
