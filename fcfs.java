@@ -63,6 +63,18 @@ class fcfs
    avgwt= avgwt+p[i].wt;
    avgtat = avgtat+p[i].tat;
  }
+ for(i=0;i<n-1;i++)
+ {
+  for(j=0;j<n-1;j++)
+  {
+   if((p[j].pid)>(p[j+1].pid))
+   {
+    t=p[j];
+    p[j]=p[j+1];
+    p[j+1]=t;
+   }
+  }
+ }
  System.out.println("PID\tAT\tBT\tCT\tTAT\tWT");
  for(i=0;i<n;i++)
  {
