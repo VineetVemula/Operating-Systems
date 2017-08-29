@@ -57,9 +57,17 @@ class rr
       
     if(tym>=busy)
     {
-    t = v.firstElement();
-    v.removeElementAt(0);
-
+     try
+      {
+        t = v.firstElement();
+        v.removeElementAt(0);
+      }
+      catch(NoSuchElementException ex)
+      {
+        tym++;
+        continue;
+      }
+     
     if(t.rt<tq)
     {
         busy=tym+t.rt;
