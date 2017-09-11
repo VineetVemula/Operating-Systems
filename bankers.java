@@ -275,3 +275,66 @@ Process P2 can finish
 New Current Available
 6 6 6 All needs are satisfied
 Safe operation, request accepted
+
+
+Enter number of processes and resources
+5 3
+Enter available array
+10 5 7
+Enter max matrix
+7 5 3
+3 2 2
+9 0 2
+2 2 2
+4 3 3
+Enter alloc matrix
+0 1 0
+2 0 0
+3 0 2
+2 1 1
+0 0 2
+
+
+Current Available
+3 3 2 Enter Requesting Process & Request Vector
+1 2 2 1
+New Need
+522
+122
+600
+011
+431
+New Alloc
+231
+200
+302
+211
+002
+New Current Available
+111dead= 1
+dead= 2
+dead= 3
+
+Process P4 can finish
+New Current Available
+3 2 2 dead= 4
+dead= 1
+
+Process P2 can finish
+New Current Available
+5 2 2 dead= 2
+dead= 3
+dead= 4
+
+Process P1 can finish
+New Current Available
+7 5 3 dead= 1
+
+Process P3 can finish
+New Current Available
+10 5 5 dead= 2
+
+Process P5 can finish
+New Current Available
+10 5 7 All needs are satisfied
+Safe operation, request accepted
