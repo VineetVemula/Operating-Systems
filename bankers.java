@@ -294,9 +294,9 @@ Enter alloc matrix
 2 1 1
 0 0 2
 
-
 Current Available
-3 3 2 Enter Requesting Process & Request Vector
+3 3 2 
+Enter Requesting Process & Request Vector
 1 2 2 1
 New Need
 522
@@ -311,28 +311,23 @@ New Alloc
 211
 002
 New Current Available
-111dead= 1
-dead= 2
-dead= 3
+111
 
 Process P4 can finish
 New Current Available
-3 2 2 dead= 4
-dead= 1
+3 2 2 
 
 Process P2 can finish
 New Current Available
-5 2 2 dead= 2
-dead= 3
-dead= 4
+5 2 2 
 
 Process P1 can finish
 New Current Available
-7 5 3 dead= 1
+7 5 3 
 
 Process P3 can finish
 New Current Available
-10 5 5 dead= 2
+10 5 5 
 
 Process P5 can finish
 New Current Available
