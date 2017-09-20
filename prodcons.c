@@ -17,22 +17,16 @@ void *prod(void *count)
 	int* c = (int*)count;
 	long int i;
 	int j;
-	for(i=0;i<5000;i++)
+	for(i=0;i<500000;i++)
 	{
 		pthread_mutex_lock(&mutex);
 		if(*c==(SIZE-1))
 			pthread_cond_wait(&full,&mutex);
 		q[*c]=1;
 		(*c)++;
-		for(j=0;j<SIZE;j++)
-    {
-  		printf("%d ", q[j]);
-  	}
-		printf("p\n");
 		if(*c==1)
 			pthread_cond_signal(&empty);
 		pthread_mutex_unlock(&mutex);
-		//printf("prod %d", *c);
 	}
 	return NULL;
 }
@@ -42,22 +36,16 @@ void *cons(void *count)
 	int* c = (int*)count;
 	long int i;
 	int k;
-	for(i=0;i<5000;i++)
+	for(i=0;i<500000;i++)
 	{
 		pthread_mutex_lock(&mutex);
 		if(*c==0)
 			pthread_cond_wait(&empty,&mutex);
 		(*c)--;
 		q[*c]=0;
-		for(k=0;k<SIZE;k++)
-    {
-    	printf("%d ", q[k]);
-    }
-		printf("c\n");
 		if(*c==SIZE-2)
 			pthread_cond_signal(&full);
 		pthread_mutex_unlock(&mutex);
-		//printf("cons %d", *c);
 	}
 	return NULL;
 }
