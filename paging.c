@@ -187,7 +187,7 @@ int main()
 
   printf("\n");
 
-  printf("Physical Address in Decimal: %d", dec);
+  printf("Physical Address in Decimal: %d\n", dec);
 }
 
 
@@ -223,3 +223,4 @@ page number in decimal is: 2
 11110100010
 physical address in binary is:
 00000101111110100010
+Physical Address in Decimal: 24482
