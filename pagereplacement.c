@@ -595,3 +595,83 @@ Enter your choice
 physical address in binary is:
 010000011111
 Physical Address in Decimal: 1055 
+	
+Enter logical address size
+8
+Enter physical address size
+4
+Enter page size
+1
+Enter the number of frames
+3
+Loglen = 13, Phylen = 12, pglen = 101.EXIT 2.CONTINUE
+2
+
+Enter logical address in decimal
+5151
+
+Logical address in binary is:
+1010000011111
+Page number in binary is 
+101
+page number in decimal is: 5
+
+ frame is
+0000011111
+physical address in binary is:
+000000011111
+Physical Address in Decimal: 31 
+1.EXIT 2.CONTINUE
+2
+
+Enter logical address in decimal
+6175
+
+Logical address in binary is:
+1100000011111
+Page number in binary is 
+110
+page number in decimal is: 6
+
+ frame is
+0000011111
+physical address in binary is:
+010000011111
+Physical Address in Decimal: 1055 
+1.EXIT 2.CONTINUE
+2
+
+Enter logical address in decimal
+7179
+
+Logical address in binary is:
+1110000001011
+Page number in binary is 
+111
+page number in decimal is: 7
+
+ frame is
+0000001011
+physical address in binary is:
+100000001011
+Physical Address in Decimal: 2059 
+1.EXIT 2.CONTINUE
+2
+
+Enter logical address in decimal
+4127
+
+Logical address in binary is:
+1000000011111
+Page number in binary is 
+100
+page number in decimal is: 4
+Enter your choice
+ 1.FIFO 2.LRU 3.LFU 4.EXIT
+1
+
+ frame is
+0000011111
+physical address in binary is:
+000000011111
+Physical Address in Decimal: 31 
