@@ -310,3 +310,54 @@ no	type	contents
 9	D	vid
 1.create 2.delete 3.display 4.exit
 4
+
+
+Enter the size of partition 
+10
+Enter the size of block 
+1
+Choose file allocation method 
+ 1.contiguous 2.continuous 3.indexed 4.exit
+1
+1.create 2.delete 3.display 4.exit
+1
+Enter file name
+vin
+Enter file size
+3
+1.create 2.delete 3.display 4.exit
+1
+Enter file name
+psh
+Enter file size
+3
+1.create 2.delete 3.display 4.exit
+1
+Enter file name
+kaus
+Enter file size
+2
+1.create 2.delete 3.display 4.exit
+2
+Enter file name
+psh
+1.create 2.delete 3.display 4.exit
+1
+Enter file name
+vid
+Enter file size
+2
+1.create 2.delete 3.display 4.exit
+3
+no	name
+0	vin
+1	vin
+2	vin
+3	vid
+4	vid
+5	free
+6	kaus
+7	kaus
+8	free
+9	free
+1.create 2.delete 3.display 4.exit
