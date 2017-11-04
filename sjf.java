@@ -56,6 +56,7 @@ class sjfs
  }
  while(c<n)
  {
+    index=-1;
     for(i=0;i<n;i++)
     {
       if(p[i].at<=tym &&(p[i].son)==0)
