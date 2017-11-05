@@ -173,13 +173,10 @@ safety(req,no,max,curavail,need,alloc,avail,sum,m,n,c);
         for(j=0;j<m;j++)
         {
          newcuravail[j]=newcuravail[j]+newalloc[i][j];
-         if(newcuravail[j]==avail[j])
-         {
-           end++;
-         }
         }
         System.out.println();
         System.out.println("Process P" + index + " can finish");
+        end++;
         System.out.println("New Current Available");
         for(j=0;j<m;j++)
         {
@@ -205,14 +202,11 @@ safety(req,no,max,curavail,need,alloc,avail,sum,m,n,c);
           return;
         }
       }
-      //if(c==0)
       else
       {
         dead++;
-        //System.out.println("dead= "+dead);
       }
       c=0;
-      end=0;
      }
      if(dead==n)
      {
@@ -233,7 +227,51 @@ safety(req,no,max,curavail,need,alloc,avail,sum,m,n,c);
   }
 }
 
+
 OUTPUT----------
+
+Enter number of processes and resources
+3
+3
+Enter available array
+8
+8
+8
+Enter max matrix
+3 3 3
+3 3 3
+8 8 8
+Enter alloc matrix
+1 1 1
+2 2 2
+0 0 0
+
+
+Current Available
+5 5 5 Enter Requesting Process & Request Vector
+1 2 2 2
+New Need
+000
+111
+888
+New Alloc
+333
+222
+000
+New Current Available
+333
+Process P1 can finish
+New Current Available
+6 6 6 
+Process P2 can finish
+New Current Available
+8 8 8 
+Process P3 can finish
+New Current Available
+8 8 8 All needs are satisfied
+Safe operation, request accepted. 
+ 
+ 
 Enter number of processes and resources
 3
 3
