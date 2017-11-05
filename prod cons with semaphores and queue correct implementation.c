@@ -14,7 +14,7 @@ void *prod(void *count)
 	int* c = (int*)count;
 	long int i;
 	int j;
-	for(i=0;i<1000;i++)
+	for(i=0;i<10;i++)
 	{
 		sem_wait(&full);
 		//sem_getvalue(&full,&s);
@@ -38,7 +38,7 @@ void *cons(void *count)
 	long int i;
 	int j;
 	int k;
-	for(i=0;i<1000;i++)
+	for(i=0;i<10;i++)
 	{
 		sem_wait(&empty);
 		//sem_getvalue(&empty,&s);
