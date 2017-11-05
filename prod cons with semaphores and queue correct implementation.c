@@ -17,15 +17,15 @@ void *prod(void *count)
 	for(i=0;i<1000;i++)
 	{
 		sem_wait(&full);
-		sem_getvalue(&full,&s);
+		//sem_getvalue(&full,&s);
 		pthread_mutex_lock(&mutex);
     rear=(rear+1)%SIZE;
 		q[rear]=1;
 		(*c)++;
-		for(j=0;j<SIZE;j++)
+		/*for(j=0;j<SIZE;j++)
 		{
 			printf("%d ", q[j]);
-		}
+		}*/
 		sem_post(&empty);
 		pthread_mutex_unlock(&mutex);
 	}
@@ -59,7 +59,7 @@ int main()
 	pthread_t consumer;
 	sem_init(&full,0,SIZE);
     sem_init(&empty,0,0);
-    sem_getvalue(&full,&s);
+    //sem_getvalue(&full,&s);
 	pthread_create(&producer, NULL, prod, &count);
 	pthread_create(&consumer, NULL, cons, &count);
     pthread_join(producer, NULL);
