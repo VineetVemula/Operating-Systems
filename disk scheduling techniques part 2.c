@@ -60,6 +60,8 @@ void main()
 			li=i;
 		}
 		li--;
+		 if(seq[li]==hd)
+			li--;
 		for(i=hd;i<ds;i++)
 		{
 			if(i==seq[ri])
