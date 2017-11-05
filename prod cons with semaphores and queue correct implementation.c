@@ -22,10 +22,10 @@ void *prod(void *count)
     rear=(rear+1)%SIZE;
 		q[rear]=1;
 		(*c)++;
-		/*for(j=0;j<SIZE;j++)
+		for(j=0;j<SIZE;j++)
 		{
 			printf("%d ", q[j]);
-		}*/
+		}
 		sem_post(&empty);
 		pthread_mutex_unlock(&mutex);
 	}
@@ -41,11 +41,15 @@ void *cons(void *count)
 	for(i=0;i<1000;i++)
 	{
 		sem_wait(&empty);
-		sem_getvalue(&empty,&s);
+		//sem_getvalue(&empty,&s);
 		pthread_mutex_lock(&mutex);
 		(*c)--;
 		q[front]=0;
     front=(front+1)%SIZE;
+		for(j=0;j<SIZE;j++)
+		{
+			printf("%d ", q[j]);
+		}
 		sem_post(&full);
 		pthread_mutex_unlock(&mutex);
 	}
