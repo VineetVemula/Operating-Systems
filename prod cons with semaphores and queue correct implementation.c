@@ -7,7 +7,7 @@
  int s=0;
  sem_t full,empty;
  pthread_mutex_t  mutex = PTHREAD_MUTEX_INITIALIZER;
- int q[SIZE],front=0,rear=0;
+ int q[SIZE],front=0,rear=SIZE-1;
  
 void *prod(void *count)
 {
